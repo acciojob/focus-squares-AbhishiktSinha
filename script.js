@@ -7,7 +7,7 @@ for(let square of squaresList) {
 function changeOthersColor(event) {
 	// event.target.style.backgroundColor = "blue";
 	squaresList.forEach((element)=>{
-		if(element != event.target) {
+		if(element.id != event.target.id) {
 			element.classList.toggle("coffee");
 		}
 	})
@@ -15,8 +15,8 @@ function changeOthersColor(event) {
 function revertColors (event) {
 	// event.target.style.backgroundColor = "lavender"
 	squaresList.forEach((element)=> {
-		if(element.classList.contains("coffee")) {
-			element.classList.remove("coffee");
+		if(element.id != event.target.id) {
+			element.classList.toggle("coffee");
 		}
 	})
 }
